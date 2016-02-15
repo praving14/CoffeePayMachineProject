@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <title>
@@ -9,14 +9,135 @@
   </head>
   <body>
   <header>
-  <a class="button" href="home.html" style="text-decoration:none" >&laquo</a>
-  <header>
-  <aside>
+  <a class="backbutton" href="home.html" style="text-decoration:none" >&laquo</a>
+  </header>
+  <aside class="menu">
+      <table id="menuTable">
+          <tr>
+              <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px; border-bottom:1px solid white">Coffee Menu</th>
+          </tr>
+          <tr>
+              <th>Coffee</th>
+              <th >Small</th>
+              <th >Medium</th>
+              <th >Large</th>
+          </tr>
+          <tr>
+              <td >Cappacino</td>
+              <td>$1.99</td>
+              <td>$2.99</td>
+              <td>$3.79</td>
+          </tr>
+          <tr>
+              <td >Mocha</td>
+              <td>$2.49</td>
+              <td>$3.39</td>
+              <td>$3.99</td>
+          </tr>
+          <tr>
+              <td >Expresso</td>
+              <td>$1.69</td>
+              <td>$2.79</td>
+              <td>$3.49</td>
+          </tr>
+          <tr>
+              <td >Classic</td>
+              <td>$1.69</td>
+              <td>$2.49</td>
+              <td>$3.19</td>
+          </tr>
+
+      </table>
   </aside>
   <div class="pickYourCofee">
+      <h1 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px; border-bottom:1px solid white">Create your own Coffee</h1>
+      <table id="selectionTable">
+          <tr>
+              <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Cup Size</th>
+          </tr>
+          <tr>
+              <td><button id="small">Small</button></td>
+              <td><button id="medium">Medium</button></td>
+              <td><button id="large">Large</button></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Sugar</th>
+          </tr>
+          <tr>
+              <td><button id="halfSpoon">&frac12; Spoon</button></td>
+              <td><button id="oneSpoon">1 Spoon</button></td>
+              <td><button id="oneHalfSpoon">&frac34; Spoon</button></td>
+              <td><button id="twoSpoon">2 Spoons</button></td>
+              <td><button id="noSugar">None</button></td>
+          </tr>
+          <tr>
+              <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Milk/Cream</th>
+          </tr>
+          <tr>
+              <td><button id="milk">Milk</button></td>
+              <td><button id="cream">Cream</button></td>
+              <td><button id="noMilk">None</button></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Coffee</th>
+          </tr>
+          <tr>
+            <td><button id="cappacino">Cappacino</button></td>
+            <td><button id="mocha">Mocha</button></td>
+            <td><button id="mocha">Expresso</button></td>
+            <td><button id="classic">Classic</button></td>
+             <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td> <button id="reset" style="margin:50px 0 0 0" >Reset</button> </td>
+              <td> <button id="addOrder" style="margin:50px 0 0 0" >Add New Order</button></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </table>
   </div>
+     
   <div class="total">
+      <h1 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px; border-bottom:1px solid white">Total</h1>
+      <table id="coffeebill">
+          <tr>
+              <th colspan="4">Cofee</th>
+              <th>price</th>
+          </tr>
+          <tr>
+              <td colspan="4">Order#1</td>
+              
+              <td>$x.xx</td>
+          </tr>
+          <tr>
+              <td colspan="4">Order#2</td>
+     
+              <td>$x.xx</td>
+          </tr>
+          <tr>
+              <td colspan="4">Order#3</td>
+           
+              <td>$x.xx</td>
+          </tr>
+          <tr>
+              <td colspan="4">Total</td>
+              
+              <td>$x.xx</td>
+          </tr>
+      </table>
+      <h2 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 50px;">Thank You! </h2>
+      <h2 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 50px;">Come again. </h2>
+      <br />
+      <br />
   </div>
+      <div style="float:right; clear:both; margin:1% 7% 0 0">
+          <button id="checkout" onclick="checkout()">Checkout</button>
+      </div>
     <!--End of all the codes-->
   <script src="script.js">
   </script>

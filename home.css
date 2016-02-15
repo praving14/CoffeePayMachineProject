@@ -1,15 +1,22 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Lato:900);
-
+﻿
 body{
-font-family: 'Lato', sans-serif;
+font-family: 'Edwardian Script ITC', sans-serif;
 background: url("http://eskipaper.com/images/free-coffee-wallpaper-3.jpg") no-repeat center fixed;
 background-size: cover;
+}
+
+.mainbody{
+    float:right;
+    width:50%;
+    height:auto;
+    margin-right:30px;
 }
 
 .homePageHeader{
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  border-bottom:1px solid white;
 }
 .letter{
   display: inline-block;
@@ -21,10 +28,13 @@ background-size: cover;
   perspective: 400px;
   z-index: 1;
 }
+.title{
+    margin:-5% 0 0 35%;
+    text-align:center;
+}
 .cofe{
-	font-family:fantasy;
-	font-weight:bold; 
-	font-size:55px;
+	font-family:'AR BERKLEY'; 
+	font-size:45px;
 	color:#7d5d3b;
 }
 .cofe:hover{
@@ -69,17 +79,21 @@ background-size: cover;
 }
 
 blockquote{
-	font-family:fantasy; 
-	font-size: 35px;
-	font-weight:bold;
+	font-family:'Edwardian Script ITC'; 
+	font-size: 45px;
 	color:#7d5d3b;
-	margin:-25% 10% 0 0;
-	float:right;
+	text-align:center;
+    margin-top:20%;
 }
 
 .divbutton{
-    margin:30% 0 0 70%;
+    margin:10% 0 0 50%;   
 }
+.highlight,#coffee{
+    font-size:larger;
+    font-family:Impact;
+}
+
 .button {
 	-moz-box-shadow: 3px 4px 0px 0px #899599;
 	-webkit-box-shadow: 3px 4px 0px 0px #899599;
@@ -103,6 +117,6 @@ blockquote{
 }
 .button:active {
 	position:relative;
-	top:1px;
+	top:3px;
 }
 
