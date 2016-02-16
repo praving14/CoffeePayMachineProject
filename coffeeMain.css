@@ -20,34 +20,41 @@ body{
 	position:relative;
 	top:2px;
 }
-aside, #selectionTable, #coffeebill{
+aside, #selectionTable{
 	float:left;
 	width:auto;
     font-family:'AR BERKLEY';
     font-size:40px;
     margin:5% 0 0 0;
 }
+#coffeebill{
+    font-family:'OCR A';
+    font-size:20px;
+    width:100%;
+    margin:0 0 5% 0;
+    color:white;
 
+}
 #menuTable{
     float:left;
 }
 td{
     text-align:center;
-    padding:5px;
+    padding:2px;
 }
 
 
 .pickYourCofee{
-	width:50%;
+	width:40%;
 	float:left;
     width:auto;
-    margin-left:80px;
+    margin-left:40px;
     border:2px dashed white;
 }
 .total{
 	float:right;
     border:1px solid black;
-    margin:5% 2% 0 0;
+    margin:5% 0 0 0;
     text-align:center;
     width:20%;
 }
@@ -56,6 +63,7 @@ button{
     cursor:pointer;
     font-family:'Lato',Arial;
     font-size:20px;
+    width:170px;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
@@ -68,32 +76,29 @@ button{
 	border-radius:15px;
 	border:1px solid #d6bcd6;
 }
-button:hover{
-    background:white;
-    color:black;
-    position:relative;
-	top:1px;
-}
+
 button:active{
     position:relative;
 	transform: translateY(4px);
 }
-#coffeebill th{
-    color:white
-}
-#coffeebill td{
-        font-size:30px;
-        font-family:sans-serif;
-        color:white;
-}
-#coffeebill{
-    width:100%;
-    margin:0 0 5% 0;
-}
-
 div.otherButtons{
     text-align:center;
 }
-#rest, #newOrder{
-  
+#checkout,#myOrder{
+    background-color:#8A3324;
+    -moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+    font-size:20px;
+    font-family:'AR DESTINE';
+    width:250px;
+}
+#getTotal, #reset, #addOrder{
+     background-color:#8A3324;
+    -moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+    font-size:20px;
+    font-family:'AR DESTINE';
+    width:170px;
 }

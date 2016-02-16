@@ -53,12 +53,17 @@
       <h1 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px; border-bottom:1px solid white">Create your own Coffee</h1>
       <table id="selectionTable">
           <tr>
+              
+              <td colspan="5"><button  id="myOrder">Start Your Oder</button></td>
+             
+          </tr>
+          <tr>
               <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Cup Size</th>
           </tr>
           <tr>
-              <td><button class="size" id="small">Small</button></td>
-              <td><button class="size" id="medium">Medium</button></td>
-              <td><button class="size" id="large">Large</button></td> 
+              <td><button class="size" id="small" disabled value="Small">Small</button></td>
+              <td><button class="size" id="medium" disabled>Medium</button></td>
+              <td><button class="size" id="large" disabled>Large</button></td> 
               <td></td>
               <td></td>
           </tr>
@@ -66,19 +71,19 @@
               <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Sugar</th>
           </tr>
           <tr>
-              <td><button class="spoon" id="halfSpoon">&frac12; Spoon</button></td>
-              <td><button class="spoon" id="oneSpoon">1 Spoon</button></td>
-              <td><button class="spoon" id="oneHalfSpoon">&frac34; Spoon</button></td>
-              <td><button class="spoon" id="twoSpoon">2 Spoons</button></td>
-              <td><button class="spoon" id="noSugar">None</button></td>
+              <td><button class="spoon" id="halfSpoon" disabled>&frac12; Spoon</button></td>
+              <td><button class="spoon" id="oneSpoon" disabled>1 Spoon</button></td>
+              <td><button class="spoon" id="threeFourthSpoon" disabled>&frac34; Spoon</button></td>
+              <td><button class="spoon" id="twoSpoon" disabled>2 Spoons</button></td>
+              <td><button class="spoon" id="noSugar" disabled>None</button></td>
           </tr>
           <tr>
               <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Milk/Cream</th>
           </tr>
           <tr>
-              <td><button class="milk" id="milk">Milk</button></td>
-              <td><button class="milk" id="cream">Cream</button></td>
-              <td><button class="milk" id="noMilk">None</button></td>
+              <td><button class="milk" id="milk" disabled>Milk</button></td>
+              <td><button class="milk" id="cream" disabled>Cream</button></td>
+              <td><button class="milk" id="noMilk" disabled>None</button></td>
               <td></td>
               <td></td>
           </tr>
@@ -86,18 +91,17 @@
               <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px;">Coffee</th>
           </tr>
           <tr>
-            <td><button class="coffeflavor" id="cappacino">Cappacino</button></td>
-            <td><button class="coffeflavor" id="mocha">Mocha</button></td>
-            <td><button class="coffeflavor" id="mocha">Expresso</button></td>
-            <td><button class="coffeflavor" id="classic">Classic</button></td>
+            <td><button class="coffeflavor" id="cappuccino" disabled>Cappuccino</button></td>
+            <td><button class="coffeflavor" id="mocha" disabled>Mocha</button></td>
+            <td><button class="coffeflavor" id="mocha" disabled>Expresso</button></td>
+            <td><button class="coffeflavor" id="classic" disabled>Classic</button></td>
              <td></td>
           </tr>
           <tr>
               <td></td>
-              <td> <button id="reset" style="margin:50px 0 0 0" >Reset</button> </td>
-              <td> <button id="getTotal" style="margin:50px 0 0 0">getTotal</button> </td>
-              <td> <button id="addOrder" style="margin:50px 0 0 0" >Add New Order</button></td>
-              <td></td>
+              <td> <button colspan="2" id="reset" style="margin:50px 0 0 0" disabled>Reset</button> </td>
+              <td> <button id="getTotal" style="margin:50px 0 0 0" disabled>Get Total</button> </td>
+              <td> <button id="addOrder" style="margin:50px 0 0 0" disabled>Add Order</button> </td>
               <td></td>
           </tr>
       </table>
@@ -111,24 +115,24 @@
               <th>price</th>
           </tr>
           <tr>
-              <td colspan="4">Order#1</td>
+              <td colspan="4">Order1: <span id ="order1"></span></td>
               
-              <td>$x.xx</td>
+              <td >$ <span id="price1">0.00</span></td>
           </tr>
           <tr>
-              <td colspan="4">Order#2</td>
+              <td colspan="4">Order2: <span id ="order2"></span></td>
      
-              <td>$x.xx</td>
+              <td>$ <span id="price2">0.00</span></td>
           </tr>
           <tr>
-              <td colspan="4">Order#3</td>
+              <td colspan="4">Order3: <span id ="order3"></span></td>
            
-              <td>$x.xx</td>
+              <td>$ <span id="price3">0.00</span></td>
           </tr>
           <tr>
               <td colspan="4">Total</td>
               
-              <td>$x.xx</td>
+              <td>$ <span id="grandTotal">0.00</span></td>
           </tr>
       </table>
       <h2 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 50px;">Thank You! </h2>
@@ -136,9 +140,10 @@
       <br />
       <br />
   </div>
-      <div style="float:right; clear:both; margin:1% 7% 0 0">
-          <button id="checkout" onclick="checkout()">Checkout</button>
+      <div style="float:right; clear:both; margin:-2% 4% 0 0">
+          <button id="checkout" onclick="checkout()" disabled>Checkout</button>
       </div>
+      <
     <!--End of all the codes-->
   <script type="text/javascript" src="script.js"></script>
   </body>
