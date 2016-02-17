@@ -107,10 +107,11 @@ blockquote{
 	cursor:pointer;
 	color:#FFC8A6;
 	font-family:'Lato',Arial;
-	font-size:20px;
+	font-size:45px;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
+    float:right;
 }
 .button:hover {
 	background-color:#8A3324;
@@ -119,4 +120,3 @@ blockquote{
 	position:relative;
 	top:3px;
 }
-
