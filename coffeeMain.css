@@ -1,10 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:900);
 
 body{
-	font-family: 'Lato', sans-serif;
 	background: url("https://image.freepik.com/free-vector/wooden-texture_23-2147511826.jpg") no-repeat center fixed;
 	background-size: cover;
+    display:none;
 }
+/* The << button to go back to the homePage*/
 .backbutton{
 	border:2px solid white;
 	color:white;
@@ -20,16 +21,25 @@ body{
 	position:relative;
 	top:2px;
 }
+
+/* Main Body Starts Here*/
 aside, #selectionTable{
 	float:left;
 	width:auto;
     font-family:'AR BERKLEY';
-    font-size:40px;
-    margin:5% 0 0 0;
+    font-size:30px;
+    margin-top:5%;
 }
-.pickYourCofee td{
-    border:hidden;
+#menuTable{
+    float:left;
+    margin-left:3%;
+    color:white;
 }
+td{
+    text-align:center;
+    padding:1px;
+}
+
 #coffeebill, #coffeebilltotal,#coffeebilltitle{
     font-family:'OCR A';
     font-size:13px;
@@ -42,49 +52,44 @@ aside, #selectionTable{
     height:400px;
     overflow:scroll;
 }
-#menuTable{
-    float:left;
-}
-td{
-    text-align:center;
-    padding:2px;
-}
+
 h4{
     text-align:center;
     font-family:'Edwardian Script ITC';
     font-size: 30px;
     margin:0;
 }
-.pickYourCofee{
-	width:40%;
+
+.total{
 	float:left;
+    border:1px solid black;
+    text-align:center;
+    width:25%;
+    margin-left:1%;
+}
+.pickYourCofee{
+	width:30%;
+	float:left;
+    margin-left:2%;
     width:auto;
-    margin-left:40px;
     border:2px dashed white;
 }
-.total{
-	float:right;
-    border:1px solid black;
-    margin:5% 0 0 0;
-    text-align:center;
-    width:20%;
-}
-button{
+/* The design for the buttons*/
+button {
     cursor:pointer;
     font-family:'Lato',Arial;
     font-size:20px;
     width:170px;
 	padding:7px 25px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #e1e2ed;
-    -moz-box-shadow: 3px 4px 0px 0px #899599;
-	-webkit-box-shadow: 3px 4px 0px 0px #899599;
-	box-shadow: 3px 4px 0px 0px #899599;
+    -moz-box-shadow: 2px 3px 0px 0px #899599;
+	-webkit-box-shadow: 2px 3px 0px 0px #899599;
+	box-shadow: 2px 3px 0px 0px #899599;
 	background-color:#7d5d3b;
 	-moz-border-radius:15px;
 	-webkit-border-radius:15px;
 	border-radius:15px;
-	border:1px solid #d6bcd6;
+    border:1px solid white;
     float:right;
 }
 
@@ -93,10 +98,12 @@ button:active{
 	transform: translateY(4px);
 }
 
-#checkout,#myOrder{
+#myOrder{
     width:250px;
+    float:left;
+    margin-left:40%;
 }
-.other, #checkout, #myOrder, #addOrder{
+.other, #myOrder, #addOrder{
      background-color:#8A3324;
     -moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -104,4 +111,74 @@ button:active{
     font-size:20px;
     font-family:'AR DESTINE';
     width:170px;
+}
+#checkout{
+     background-color:#8A3324;
+    -moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+    font-size:20px;
+    font-family:'AR DESTINE';
+    width:170px;
+    text-decoration:none;
+     cursor:pointer;
+	padding:7px 25px;
+    -moz-box-shadow: 2px 3px 0px 0px #899599;
+	-webkit-box-shadow: 2px 3px 0px 0px #899599;
+	box-shadow: 2px 3px 0px 0px #899599;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+    float:right;
+    border:1px solid white;
+}
+#checkout:active{
+    position:relative;
+	transform: translateY(4px);
+}
+/*The table headers and the sentences used in the table*/
+.questions{
+    text-align:left;
+    font-family:'AR BERKLEY';
+    color:brown;
+}
+.tableheaders{
+    text-align:center;
+    font-family:'Edwardian Script ITC';
+    font-size: 45px;
+    font-weight:bold;
+}
+@media screen and (max-device-width: 1280px) {
+    .menu{
+        width:33%;
+    }
+    .pickYourCofee{
+        width:38%;
+    }
+    #menuTable{
+        width:90%;
+        font-size:15px;
+    }
+    #selectionTable th{
+        font-size:25px;
+    }
+    #selectionTable{
+        width:100%;
+    }
+    button,.other, #checkout, #myOrder, #addOrder{
+        width:90px;
+        padding:1px 10px;
+        font-size:13px;
+        border-radius:7px;
+        text-shadow:none;
+    }
+    .tableheaders{
+        font-size: 35px;
+        text-align:center; 
+    }
+    #myOrder{
+        float:left;
+        margin-left:40%;
+    }
+  
 }

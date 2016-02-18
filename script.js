@@ -180,7 +180,7 @@ for (var i = 0; i < coffeeOption.length; i++) {
 * When click on the get Total button, you will obtain the total of the order and the see the bill on he right
 */
 var total = document.getElementById('getTotal');
-total.addEventListener('click', function () {
+    total.addEventListener('click', function () {
     orderList[counter]['bill'] = getPrice(orderList[counter]['size'].toLowerCase(), orderList[counter]['coffee'].toLowerCase());
     cell2.innerText = orderList[counter]['bill'];
     totalOfBill.innerText = '$' + getBillTotal();
@@ -268,3 +268,20 @@ function createNewRow() {
     cell1 = row.insertCell(0);
     cell2 = row.insertCell(1);
 }
+
+/*
+*-----------------------------CHECKOUT-------------------------------
+* Alert box will pop up saying that the order is complete. Revert back to Home page.
+*/
+finalCheckOut.addEventListener('click', function () {
+    alert("Total: $" + getBillTotal() + ".      " + "Your order is Complete. Enjoy your Coffee!");
+    disableButtons();
+    window.location = "home.html";
+});
+
+/*
+*
+*/
+$(window).load(function () {
+    $("body").fadeIn(2000);
+});

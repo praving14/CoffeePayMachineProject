@@ -1,139 +1,188 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      CoffeePay
-  </title>
-  <link href="coffeeMain.css" rel="stylesheet" />
-  <meta charset="utf-8" />
-  </head>
-  <body>
-  <header>
-  <a class="backbutton" href="home.html" style="text-decoration:none" >&laquo</a>
-  </header>
-  <aside class="menu">
-      <table id="menuTable">
-          <tr>
-              <th colspan="4" style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px; border-bottom:1px solid white">Coffee Menu</th>
-          </tr>
-          <tr>
-              <th>Coffee</th>
-              <th >Small</th>
-              <th >Medium</th>
-              <th >Large</th>
-          </tr>
-          <tr>
-              <td >Cappacino</td>
-              <td>$1.99</td>
-              <td>$2.99</td>
-              <td>$3.79</td>
-          </tr>
-          <tr>
-              <td >Mocha</td>
-              <td>$2.49</td>
-              <td>$3.39</td>
-              <td>$3.99</td>
-          </tr>
-          <tr>
-              <td >Expresso</td>
-              <td>$1.69</td>
-              <td>$2.79</td>
-              <td>$3.49</td>
-          </tr>
-          <tr>
-              <td >Classic</td>
-              <td>$1.69</td>
-              <td>$2.49</td>
-              <td>$3.19</td>
-          </tr>
 
-      </table>
-  </aside>
-  <div class="pickYourCofee">
-      <h1 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px">Create your own Coffee</h1>
-      <h3 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 40px; color:white; border-bottom:1px solid white">Start your order and follow through the steps for a wonderful coffee.</h3>
-      <table id="selectionTable">
-          <tr>
-              
-              <td colspan="5"><button  id="myOrder">Start Your New Order</button></td>
-             
-          </tr>
-          <tr>
-              <th colspan="4" style="text-align:left; font-family:'Edwardian Script ITC'; font-size: 40px;">1. Choose your Cup Size</th>
-          </tr>
-          <tr>
-              <td><button class="size" id="small" disabled value="Small">Small</button></td>
-              <td><button class="size" id="medium" disabled>Medium</button></td>
-              <td><button class="size" id="large" disabled>Large</button></td> 
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <th colspan="4" style="text-align:left; font-family:'Edwardian Script ITC'; font-size: 40px;">2. How much sugar would you want?</th>
-          </tr>
-          <tr>
-              <td><button class="spoon" id="halfSpoon" disabled>&frac12; Spoon</button></td>
-              <td><button class="spoon" id="oneSpoon" disabled>1 Spoon</button></td>
-              <td><button class="spoon" id="threeFourthSpoon" disabled>&frac34; Spoon</button></td>
-              <td><button class="spoon" id="twoSpoon" disabled>2 Spoons</button></td>
-              <td><button class="spoon" id="noSugar" disabled>None</button></td>
-          </tr>
-          <tr>
-              <th colspan="4" style="text-align:left; font-family:'Edwardian Script ITC'; font-size: 40px;">3. Do you prefer Milk or Cream?</th>
-          </tr>
-          <tr>
-              <td><button class="milk" id="milk" disabled>Milk</button></td>
-              <td><button class="milk" id="cream" disabled>Cream</button></td>
-              <td><button class="milk" id="noMilk" disabled>None</button></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <th colspan="4" style="text-align:left; font-family:'Edwardian Script ITC'; font-size: 40px;">4. Select your Coffee</th>
-          </tr>
-          <tr>
-            <td><button class="coffeflavor" id="cappuccino" disabled>Cappuccino</button></td>
-            <td><button class="coffeflavor" id="mocha" disabled>Mocha</button></td>
-            <td><button class="coffeflavor" id="expresso" disabled>Expresso</button></td>
-            <td><button class="coffeflavor" id="classic" disabled>Classic</button></td>
-             <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td> <button class="other" colspan="2" id="reset" style="margin:50px 0 0 0">Reset</button> </td>
-              <td> <button class="other" id="getTotal" style="margin:50px 0 0 0" disabled>Get Total</button> </td>
-              <td> <button id="addOrder" style="margin:50px 0 0 0" disabled>Add Order</button> </td>
-              <td></td>
-          </tr>
-      </table>
-  </div>
-     
-  <div class="total">
-      <h1 style="text-align:center; font-family:'Edwardian Script ITC'; font-size: 60px; border-bottom:1px solid white">Total</h1>
-      <div class="mainbillTable">
-      <table id="coffeebill">
-          <tr>
-              <th style="color:black">COFFEE</th>
-              <th style="color:black">PRICE<span style="color:white; font-size:20px">$</span></th>
-          </tr><!-- Here the row will be created automatically-->
-      </table>
-       </div>
-        <table id="coffeebilltotal" style="height:10px">
-          <tr>
-              <td colspan="3">Total</td>
-              
-              <td colspan="2"><span id="grandTotal"></span></td>
-          </tr>
-      </table>
-      <h4>Thank You! </h4>
-      <h4>Come again. </h4>
-      <br />
-      <br />
-  </div>
-      <div style="float:right; clear:both; margin:-2% 4% 0 0">
-          <button id="checkout" disabled>Checkout</button>
-      </div>
+<head>
+    <title>
+        Order Your Coffee
+    </title>
+    <link href="coffeeMain.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <a class="backbutton" href="home.html" style="text-decoration:none">&laquo</a>
+        </header>
+        <aside class="menu">
+            <table id="menuTable">
+                <tr>
+                    <th class="tableheaders" colspan="4" style="border-bottom:1px solid white">Coffee Menu</th>
+                </tr>
+                <tr>
+                    <th class="tableheaders">Coffee</th>
+                    <th class="tableheaders">Small</th>
+                    <th class="tableheaders">Medium</th>
+                    <th class="tableheaders">Large</th>
+                </tr>
+                <tr>
+                    <td class="tableheaders">Cappacino</td>
+                    <td>$1.99</td>
+                    <td>$2.99</td>
+                    <td>$3.79</td>
+                </tr>
+                <tr>
+                    <td class="tableheaders">Mocha</td>
+                    <td>$2.49</td>
+                    <td>$3.39</td>
+                    <td>$3.99</td>
+                </tr>
+                <tr>
+                    <td class="tableheaders">Expresso</td>
+                    <td>$1.69</td>
+                    <td>$2.79</td>
+                    <td>$3.49</td>
+                </tr>
+                <tr>
+                    <td class="tableheaders">Classic</td>
+                    <td>$1.69</td>
+                    <td>$2.49</td>
+                    <td>$3.19</td>
+                </tr>
+
+            </table>
+        </aside>
+        <div class="pickYourCofee">
+            <h1 class="tableheaders" style="border-bottom:1px solid white">Create your own Coffee</h1>
+            <h3 class="tableheaders">Start your order and follow through the steps for a wonderful coffee.</h3>
+            <table id="selectionTable">
+                <tr>
+
+                    <td colspan="5">
+                        <button id="myOrder">Start Your New Order</button>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th class="questions" colspan="4">1. Choose your Cup Size</th>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="size" id="small" disabled value="Small">Small</button>
+                    </td>
+                    <td>
+                        <button class="size" id="medium" disabled>Medium</button>
+                    </td>
+                    <td>
+                        <button class="size" id="large" disabled>Large</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="questions" colspan="4">2. How much sugar would you want?</th>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="spoon" id="halfSpoon" disabled>&frac12; Spoon</button>
+                    </td>
+                    <td>
+                        <button class="spoon" id="oneSpoon" disabled>1 Spoon</button>
+                    </td>
+                    <td>
+                        <button class="spoon" id="threeFourthSpoon" disabled>&frac34; Spoon</button>
+                    </td>
+                    <td>
+                        <button class="spoon" id="twoSpoon" disabled>2 Spoons</button>
+                    </td>
+                    <td>
+                        <button class="spoon" id="noSugar" disabled>None</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="questions" colspan="4">3. Do you prefer Milk or Cream?</th>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="milk" id="milk" disabled>Milk</button>
+                    </td>
+                    <td>
+                        <button class="milk" id="cream" disabled>Cream</button>
+                    </td>
+                    <td>
+                        <button class="milk" id="noMilk" disabled>None</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="questions" colspan="4">4. Select your Coffee</th>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="coffeflavor" id="cappuccino" disabled>Cappuccino</button>
+                    </td>
+                    <td>
+                        <button class="coffeflavor" id="mocha" disabled>Mocha</button>
+                    </td>
+                    <td>
+                        <button class="coffeflavor" id="expresso" disabled>Expresso</button>
+                    </td>
+                    <td>
+                        <button class="coffeflavor" id="classic" disabled>Classic</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="other" colspan="2" id="reset" style="margin:50px 0 0 0">Reset</button>
+                    </td>
+                    <td>
+                        <button class="other" id="getTotal" style="margin:50px 0 0 0" disabled>Get Total</button>
+                    </td>
+                    <td>
+                        <button id="addOrder" style="margin:50px 0 0 0" disabled>Add Order</button>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="total">
+            <h1 class="tableheaders" style="border-bottom:1px solid white">Total</h1>
+            <div class="mainbillTable">
+                <table id="coffeebill">
+                    <tr>
+                        <th style="color:black">COFFEE</th>
+                        <th style="color:black">
+                            PRICE<span style="color:white; font-size:20px">$</span>
+                        </th>
+                    </tr>
+                    <!-- Here the row will be created automatically-->
+                </table>
+            </div>
+            <table id="coffeebilltotal" style="height:10px">
+                <tr>
+                    <td colspan="3">Total</td>
+
+                    <td colspan="2">
+                        <span id="grandTotal"></span>
+                    </td>
+                </tr>
+            </table>
+            <h4>Thank You! </h4>
+            <h4>Come again. </h4>
+            <br />
+            <br />
+        </div>
+        <div style="float:right; clear:both; margin:-2% 4% 0 0">
+            <button id="checkout" href="home.html" disabled>Checkout</button>
+        </div>
+    </div>
     <!--End of all the codes-->
-  <script type="text/javascript" src="script.js"></script>
-  </body>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>
