@@ -107,14 +107,15 @@ startOrder.addEventListener('click', function () {
 */
 for (var i = 0; i < cupSize.length; i++) {
     cupSize[i].addEventListener('click', function () {
-        orderList[counter]['size'] = this.id.toString().toUpperCase();
-        cell1.innerText = orderList[counter]['size'] + ' Cup';
+        // enable the sppon size buttons
         for (var i = 0; i < spoonSize.length; i++) {
-            spoonSize[i].disabled = false; // This enables the other buttons so that the user can select their coffee specifics.
+            spoonSize[i].disabled = false; 
             if (spoonSize[i].disabled == false) {
                 spoonSize[i].style.color = 'white';
             }
         }
+        orderList[counter]['size'] = this.id.toString().toUpperCase();
+        cell1.innerText = orderList[counter]['size'] + ' Cup';
     });
 }
 
@@ -127,8 +128,16 @@ for (var i = 0; i < cupSize.length; i++) {
 
 for (var i = 0; i < spoonSize.length; i++) {
     spoonSize[i].addEventListener('click', function () {
+        // disable the cup size buttons
+        for (var i = 0; i < cupSize.length; i++) {
+            cupSize[i].disabled = true;
+            if (cupSize[i].disabled == true) {
+                cupSize[i].style.color = '';
+            }
+        }
         orderList[counter]['sugarAmount'] = this.id.toString().toUpperCase();
         cell1.innerText = orderList[counter]['size'] + 'Cup, ' + orderList[counter]['sugarAmount'] + ' Sugar ';
+        // enable the milk / cream buttons
         for (var i = 0; i < milk.length; i++) {
             milk[i].disabled = false; // This enables the other buttons so that the user can select their coffee specifics.
             if (milk[i].disabled == false) {
@@ -147,8 +156,16 @@ for (var i = 0; i < spoonSize.length; i++) {
 
 for (var i = 0; i < milk.length; i++) {
     milk[i].addEventListener('click', function () {
+        //disable the spoon size button
+        for (var i = 0; i < spoonSize.length; i++) {
+            spoonSize[i].disabled = true;
+            if (spoonSize[i].disabled == true) {
+                spoonSize[i].style.color = '';
+            }
+        }
         orderList[counter]['milkOrCream'] = this.id.toString().toUpperCase();
         cell1.innerText = orderList[counter]['size'] + 'Cup ' + orderList[counter]['sugarAmount'] + ' Sugar, ' + orderList[counter]['milkOrCream'];
+        //enable the coffee options
         for (var i = 0; i < coffeeOption.length; i++) {
             coffeeOption[i].disabled = false; // This enables the other buttons so that the user can select their coffee specifics.
             if (coffeeOption[i].disabled == false) {
@@ -167,11 +184,19 @@ for (var i = 0; i < milk.length; i++) {
 
 for (var i = 0; i < coffeeOption.length; i++) {
     coffeeOption[i].addEventListener('click', function () {
-        orderList[counter]['coffee'] = this.id.toString().toUpperCase();
-        cell1.innerText = orderList[counter]['size'] + 'Cup, ' + orderList[counter]['sugarAmount'] + ' Sugar, ' + orderList[counter]['milkOrCream'] + ' ' + orderList[counter]['coffee'] + ' Coffee';
-        for (var i = 0; i < otherbuttons.length; i++) {
-            otherbuttons[i].disabled = false; // This enables the other buttons so that the user can select their coffee specifics.
+        //disable the spoon milk/cream button
+        for (var i = 0; i < milk.length; i++) {
+            milk[i].disabled = true;
+            if (milk[i].disabled == true) {
+                milk[i].style.color = '';
+            }
         }
+        orderList[counter]['coffee'] = this.id.toString().toUpperCase();
+        cell1.innerText = orderList[counter]['size'] + 'Cup, ' + orderList[counter]['sugarAmount'] + ' Sugar, ' + orderList[counter]['milkOrCream'] + ' ' + orderList[counter]['coffee'] + ' Coffee';  
+        // enable the other buttons: 'get Total' and 'Reset' buttons
+        for (var i = 0; i < otherbuttons.length; i++) {
+                otherbuttons[i].disabled = false; // This enables the other buttons so that the user can select their coffee specifics.
+            }
     });
 }
 
@@ -280,7 +305,7 @@ finalCheckOut.addEventListener('click', function () {
 });
 
 /*
-*
+* Make sure that the window cannot be seen until the page has been completely loaded.
 */
 $(window).load(function () {
     $("body").fadeIn(2000);
